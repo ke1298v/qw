@@ -5,10 +5,13 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-      - name: Download project
+      - name: Checkout
         uses: actions/checkout@v4
       - name: Install XcodeGen
-        run: brew install xcodegen
+        run: |
+          brew untap aws/tap || true
+          brew update
+          brew install xcodegen
       - name: Generate Xcode project
         run: xcodegen generate
       - name: Build App
@@ -21,7 +24,7 @@ jobs:
             -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO
-      - name: Find App
+      - name: Show App
         run: |
           find build -name "*.app" -print
       - name: Upload App
