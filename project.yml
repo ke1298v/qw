@@ -8,6 +8,7 @@ targets:
     platform: iOS
     sources:
       - ContentView.swift
+      - MyLocalApp.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.ahmed.MyLocalApp
