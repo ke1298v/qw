@@ -1,0 +1,21 @@
+name: MyLocalApp
+
+options:
+  bundleIdPrefix: com.ahmed
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  MyLocalApp:
+    type: application
+    platform: iOS
+
+    sources:
+      - ContentView.swift
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ahmed.MyLocalApp
+        INFOPLIST_KEY_CFBundleDisplayName: My Local App
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        SWIFT_VERSION: 5.0
