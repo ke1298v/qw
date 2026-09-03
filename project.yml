@@ -14,5 +14,6 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.ahmed.MyLocalApp
         SWIFT_VERSION: 5.0
         TARGETED_DEVICE_FAMILY: "1"
-        INFOPLIST_KEY_UILaunchScreen_Generation: "YES"
+        GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: My Local App
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
